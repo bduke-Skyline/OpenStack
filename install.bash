@@ -20,9 +20,9 @@ ping controller -c 5
 #
 #Clone the installer source code
 #
-#apt-get update
-#apt-get install git -y
-#git clone https://github.com/bduke-Skyline/OpenStack.git
+apt-get update
+apt-get install git -y
+git clone https://github.com/bduke-Skyline/OpenStack.git
 cd OpenStack/
 
 #
