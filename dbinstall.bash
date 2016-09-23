@@ -91,6 +91,7 @@ heatdbpass="HEAT_DBPASS"
 		echo "[client]" > /root/.my.cnf
 		echo "user=$mysqldbadm" >> /root/.my.cnf
 		echo "password=$mysqldbpassword" >> /root/.my.cnf
+	
 		echo "Keystone:"
 		echo "CREATE DATABASE $keystonedbname default character set utf8;"|$mysqlcommand
 		echo "GRANT ALL ON $keystonedbname.* TO '$keystonedbuser'@'%' IDENTIFIED BY '$keystonedbpass';"|$mysqlcommand
