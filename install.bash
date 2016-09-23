@@ -23,7 +23,7 @@ ping controller -c 5
 apt-get update
 apt-get install git -y
 git clone https://github.com/bduke-Skyline/openstack-mitaka.git
-cd openstack-mitaka/
+cd OpenStack/
 
 #
 #Always backup first
