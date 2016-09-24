@@ -2,7 +2,8 @@
 Bash script to install openstack-Mitaka in ubuntu 14.04LTS
 
 >Download the script using the below command:
->sudo -i
+>>sudo -i
+
 >>git clone https://github.com/bduke-Skyline/OpenStack.git
 
 >>cd OpenStack/
