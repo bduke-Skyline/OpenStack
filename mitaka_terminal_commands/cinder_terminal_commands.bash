@@ -31,6 +31,6 @@ vgcreate cinder-volumes /dev/vdb
 
 #verify
 source admin-openrc
-openstack cinder list
+openstack volume list
 
 
