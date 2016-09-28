@@ -47,6 +47,9 @@ cp /etc/neutron/dhcp_agent.ini /etc/neutron/dhcp_agent.ini-bkp
 cp /etc/neutron/plugins/ml2/linuxbridge_agent.ini /etc/neutron/plugins/ml2/linuxbridge_agent.ini-bkp
 cp /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugins/ml2/ml2_conf.ini-bkp
 
+#backup default cinder files
+cp /etc/cinder/cinder.conf /etc/cinder/cinder.conf-bkp
+
 #backup default horizon files 
 cp /etc/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_settings.py-bkp
 
