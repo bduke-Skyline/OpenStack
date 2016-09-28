@@ -5,6 +5,9 @@
 # OpenStack MITAKA for Ubuntu 14.04lts
 #
 #
+#Setup LVM drive to be used by Cinder
+pvcreate /dev/vdb
+vgcreate cinder-volumes /dev/vdb
 
 #Cinder Controller comments
 source admin-openrc
@@ -26,9 +29,6 @@ su -s /bin/sh -c "cinder-manage db sync" cinder
 service cinder-scheduler restart
 service cinder-api restart
 rm -f /var/lib/cinder/cinder.sqlite
-
-pvcreate /dev/vdb
-vgcreate cinder-volumes /dev/vdb
 
 #verify
 source admin-openrc
