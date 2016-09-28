@@ -93,6 +93,9 @@ cp ./mitaka_configuration/neutron/dhcp_agent.ini /etc/neutron/dhcp_agent.ini
 cp ./mitaka_configuration/neutron/plugins/ml2/linuxbridge_agent.ini /etc/neutron/plugins/ml2/linuxbridge_agent.ini
 cp ./mitaka_configuration/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugins/ml2/ml2_conf.ini
 
+#copy pre-configured cinder files
+cp ./mitaka_configuration/cinder/cinder.conf /etc/cinder/cinder.conf
+
 #copy pre-configured horizon files 
 cp ./mitaka_configuration/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_settings.py
 cp ./mitaka_configuration/logo-splash.png /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png
