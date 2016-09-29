@@ -28,3 +28,4 @@ openstack role create heat_stack_owner
 openstack role add --project demo --user demo heat_stack_owner
 openstack role create heat_stack_user
 
+su -s /bin/sh -c "heat-manage db sync" heat
