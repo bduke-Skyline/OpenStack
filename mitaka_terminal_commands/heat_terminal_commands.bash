@@ -29,3 +29,7 @@ openstack role add --project demo --user demo heat_stack_owner
 openstack role create heat_stack_user
 
 su -s /bin/sh -c "heat-manage db sync" heat
+
+service heat-api restart
+service heat-api-cfn restart
+service heat-engine restart
