@@ -126,6 +126,9 @@ bash mitaka_terminal_commands/neutron_terminal_commands.bash
 #run cinder environment set commands
 bash mitaka_terminal_commands/cinder_terminal_commands.bash
 
+#run heat environment set commands
+bash mitaka_terminal_commands/heat_terminal_commands.bash
+
 #
 #Restore git clone default IP file in case of re-running
 #
