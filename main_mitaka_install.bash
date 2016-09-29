@@ -53,6 +53,9 @@ cp /etc/cinder/cinder.conf /etc/cinder/cinder.conf-bkp
 #backup default horizon files 
 cp /etc/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_settings.py-bkp
 
+#backup default heat files
+cp /etc/heat/heat.conf /etc/heat.conf-bkp
+
 #
 #Copy the pre-configured openstack configuration file 
 #into the appropriate directories 
@@ -100,6 +103,9 @@ cp ./mitaka_configuration/cinder/cinder.conf /etc/cinder/cinder.conf
 cp ./mitaka_configuration/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_settings.py
 cp ./mitaka_configuration/logo-splash.png /usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/logo-splash.png
 service apache2 restart 
+
+#copy pre-configured heat files
+cp ./mitaka_configuration/heat/heat.conf /etc/heat/heat.conf
 
 #
 #Run the terminal commands 
