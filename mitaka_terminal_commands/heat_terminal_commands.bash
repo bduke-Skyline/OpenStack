@@ -27,3 +27,4 @@ openstack role add --domain heat --user-domain heat --user heat_domain_admin adm
 openstack role create heat_stack_owner
 openstack role add --project demo --user demo heat_stack_owner
 openstack role create heat_stack_user
+
