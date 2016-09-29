@@ -34,8 +34,5 @@ apt-get install cinder-api cinder-scheduler -y
 apt-get install lvm2 -y
 apt-get install cinder-volume -y
 
-#Heat
-apt-get install heat-api heat-api-cfn heat-engine
-
 #Shared File Systems Option 1: No driver support for share #servers management
 apt-get install lvm2 nfs-kernel-server -y
