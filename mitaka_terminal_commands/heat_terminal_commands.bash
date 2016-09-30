@@ -16,9 +16,9 @@ openstack endpoint create --region RegionOne orchestration internal http://contr
 openstack endpoint create --region RegionOne orchestration admin http://controller:8004/v1/%\(tenant_id\)s
 
 openstack service create --name heat-fn --description "OpenStack Orchestration service" cloudformation
-openstack endpoint create --region RegionOne cloudformation public http://controller:8000/v1/%\(tenant_id\)s
-openstack endpoint create --region RegionOne cloudformation internal http://controller:8000/v1/%\(tenant_id\)s
-openstack endpoint create --region RegionOne cloudformation admin http://controller:8000/v1/%\(tenant_id\)s
+openstack endpoint create --region RegionOne cloudformation public http://controller:8000/v1
+openstack endpoint create --region RegionOne cloudformation internal http://controller:8000/v1
+openstack endpoint create --region RegionOne cloudformation admin http://controller:8000/v1
 
 openstack domain create --description "Stack projects and users" heat
 openstack user create --domain heat --password HEAT_DOMAIN_PASS heat_domain_admin
