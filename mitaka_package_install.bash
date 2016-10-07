@@ -40,5 +40,8 @@ apt-get install heat-api heat-api-cfn heat-engine -y
 #Shared File Systems Option 1: No driver support for share #servers management
 apt-get install lvm2 nfs-kernel-server -y
 
-#Swift 
+#Swift Controller
 apt-get install swift swift-proxy python-swiftclient python-keystoneclient python-keystonemiddleware -y
+
+#Swift Storage
+apt-get install xfsprogs rsync -y
