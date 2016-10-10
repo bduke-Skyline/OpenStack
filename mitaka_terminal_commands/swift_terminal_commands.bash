@@ -29,7 +29,7 @@ mkdir -p /srv/node/vde
 #sed /etc/fstab file
 sed -i "$ a /dev/vdc /srv/node/vdc xfs noatime,nodiratime,nobarrier,logbufs=8 0 2" /etc/fstab
 sed -i "$ a /dev/vdd /srv/node/vdd xfs noatime,nodiratime,nobarrier,logbufs=8 0 2" /etc/fstab
-sed -i "$ a /dev/vde /srv/node/vde xfs noatime,nodiratime,nobarrier,logbugs=8 0 2" /etc/fstab
+sed -i "$ a /dev/vde /srv/node/vde xfs noatime,nodiratime,nobarrier,logbufs=8 0 2" /etc/fstab
 
 #mount the storage devices
 mount /srv/node/vdc
