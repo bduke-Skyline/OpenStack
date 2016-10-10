@@ -78,3 +78,11 @@ swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6
 swift-ring-builder object.builder
 swift-ring-builder object.builder rebalance
 swift-ring-builder object.builder
+
+#Change Ownership
+chown -R root:swift /etc/swift
+
+#restart Swift services
+service memcached restart
+service swift-proxy restart
+swift-init all start
