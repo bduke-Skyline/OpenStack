@@ -24,8 +24,11 @@ mkfs.xfs /dev/vdd
 mkdir -p /srv/node/vdc
 mkdir -p /srv/node/vdd
 
-#sed etc/fstab file
+#sed /etc/fstab file
+sed '$ a /dev/vdc /srv/node/vdc xfs noatime,nodiratime,nobarrier,logbufs=8 0 2'
+sed '$ a /dev/vdd /srv/node/vdd xfs noatime,nodiratime,nobarrier,logbufs=8 0 2'
 
+#mount the storage devices
 mount /srv/node/vdc
 mount /sr/node/vdd
 
