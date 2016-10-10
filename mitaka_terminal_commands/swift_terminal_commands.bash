@@ -27,7 +27,7 @@ mkdir -p /srv/node/vdd
 #sed etc/fstab file
 
 mount /srv/node/vdc
-mout /sr/node/vdd
+mount /sr/node/vdd
 
 #Restart rsync used by Swift Storage Node
 service rsync restart
