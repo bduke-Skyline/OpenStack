@@ -54,27 +54,27 @@ chmod -R 775 /var/cache/swift
 #Swift Rings
 #Swift Account Ring Setup
 swift-ring-builder account.builder create 10 3 1
-swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6002 --device vdc --weight 100
-swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6002 --device vdd --weight 100
-swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6002 --device vde --weight 100
+swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6102 --device vdc --weight 100
+swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6102 --device vdd --weight 100
+swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6102 --device vde --weight 100
 swift-ring-builder account.builder
 swift-ring-builder account.builder rebalance
 swift-ring-builder account.builder
 
 #Swift Container Ring setup
 swift-ring-builder container.builder create 10 3 1
-swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6001 --device vdc --weight 100
-swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6001 --device vdd --weight 100
-swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6001 --device vde --weight 100
+swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6101 --device vdc --weight 100
+swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6101 --device vdd --weight 100
+swift-ring-builder container.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6101 --device vde --weight 100
 swift-ring-builder container.builder
 swift-ring-builder container.builder rebalance
 swift-ring-builder container.builder
 
 #Swift Object Ring setup
 swift-ring-builder object.builder create 10 3 1
-swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6000 --device vdc --weight 100
-swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6000 --device vdd --weight 100
-swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6000 --device vde --weight 100
+swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6100 --device vdc --weight 100
+swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6100 --device vdd --weight 100
+swift-ring-builder object.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6100 --device vde --weight 100
 swift-ring-builder object.builder
 swift-ring-builder object.builder rebalance
 swift-ring-builder object.builder
