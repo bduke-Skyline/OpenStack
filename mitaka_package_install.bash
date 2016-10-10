@@ -45,4 +45,4 @@ apt-get install swift swift-proxy python-swiftclient python-keystoneclient pytho
 
 #Swift Storage
 apt-get install xfsprogs rsync -y
-apt-get install swift-account swift-container swift-object
+apt-get install swift-account swift-container swift-object -y
