@@ -113,6 +113,7 @@ service apache2 restart
 cp ./mitaka_configuration/heat/heat.conf /etc/heat/heat.conf
 
 #copy pre-configured swift controller files
+mkdir /etc/swift/
 cp ./mitaka_configuration/swift/proxy-server.conf /etc/swift/proxy-server.conf
 
 #copy pre-configured swift storage files
