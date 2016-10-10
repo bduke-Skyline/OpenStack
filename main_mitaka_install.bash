@@ -56,7 +56,10 @@ cp /etc/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_set
 #backup default heat files
 cp /etc/heat/heat.conf /etc/heat.conf-bkp
 
+#backup default swift files
+#No swift config files are installed during installation
 #
+
 #Copy the pre-configured openstack configuration file 
 #into the appropriate directories 
 #
@@ -107,6 +110,15 @@ service apache2 restart
 #copy pre-configured heat files
 cp ./mitaka_configuration/heat/heat.conf /etc/heat/heat.conf
 
+#copy pre-configured swift controller files
+cp ./mitaka_configuration/swift/proxy-server.conf /etc/swift/proxy-server.conf
+
+#copy pre-configured swift storage files
+cp ./mitaka_configuration/swift/rsyncd.conf /etc/rsyncd.conf
+cp ./mitaka_configuration/swift/account-server.conf /etc/swift/account-server.conf
+cp ./mitaka_configuration/swift/container-server.conf /etc/swift/container-server.conf
+cp ./mitaka_configuration/swift/object-server.conf /etc/swift/object-server.conf
+
 #
 #Run the terminal commands 
 #sourcing environment is important but not before keystone
@@ -135,6 +147,8 @@ bash mitaka_terminal_commands/cinder_terminal_commands.bash
 #run heat environment set commands
 bash mitaka_terminal_commands/heat_terminal_commands.bash
 
+#run swift environment set commands
+bash mitaka_terminal_commands/swift_terminal_commands.bash
 #
 #Restore git clone default IP file in case of re-running
 #
