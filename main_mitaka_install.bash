@@ -56,9 +56,6 @@ cp /etc/openstack-dashboard/local_settings.py /etc/openstack-dashboard/local_set
 #backup default heat files
 cp /etc/heat/heat.conf /etc/heat.conf-bkp
 
-#backup default rsync files
-cp /etc/rsyncd.conf /etc/rsyncd.conf-bkp
-
 #backup default swift files
 #No swift config files are installed during installation
 #
