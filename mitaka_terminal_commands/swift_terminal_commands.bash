@@ -20,17 +20,21 @@ openstack endpoint create --region RegionOne object-store admin http://controlle
 #Setup Partitions to be used by Swift Storage Node
 mkfs.xfs /dev/vdc
 mkfs.xfs /dev/vdd
+mkfs.xfs /dev/vde
 
 mkdir -p /srv/node/vdc
 mkdir -p /srv/node/vdd
+mkdir -p /srv/node/vde
 
 #sed /etc/fstab file
 sed "$ a /dev/vdc /srv/node/vdc xfs noatime,nodiratime,nobarrier,logbufs=8 0 2"
 sed "$ a /dev/vdd /srv/node/vdd xfs noatime,nodiratime,nobarrier,logbufs=8 0 2"
+sed "$ a /dev/vde /srv/node/vde xfs noatime,nodiratime,nobarrier,logbugs=8 0 2"
 
 #mount the storage devices
 mount /srv/node/vdc
-mount /sr/node/vdd
+mount /srv/node/vdd
+mount /srv/node/vde
 
 #sed /etc/default/rsync
 sed -i "/RSYNC_ENABLE=false/RSYNC_ENABLE=true/g" /etc/default/rsync
