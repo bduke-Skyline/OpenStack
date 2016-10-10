@@ -37,7 +37,7 @@ mount /srv/node/vdd
 mount /srv/node/vde
 
 #sed /etc/default/rsync
-sed -i "/RSYNC_ENABLE=false/RSYNC_ENABLE=true/g" /etc/default/rsync
+sed -i "s/RSYNC_ENABLE=false/RSYNC_ENABLE=true/" /etc/default/rsync
 
 #Restart rsync used by Swift Storage Node
 service rsync restart
