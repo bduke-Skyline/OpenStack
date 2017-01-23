@@ -52,6 +52,9 @@ chmod -R 775 /var/cache/swift
 #End of Swift Storage Node setup
 
 #Swift Rings
+#move to the correct directory to create the rings in
+cd /etc/swift
+
 #Swift Account Ring Setup
 swift-ring-builder account.builder create 10 3 1
 swift-ring-builder account.builder add --region 1 --zone 1 --ip 10.0.0.3 --port 6102 --device vdc --weight 100
