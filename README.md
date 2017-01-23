@@ -14,8 +14,8 @@ Bash script to install openstack-Mitaka in ubuntu 14.04LTS
 
 IMPORTANT:
   - Use this script in the fresh ubuntu 14.04LTS machine.
-  - create a seperate 3GB HDD to be used by Cinder-Block Level Storage
-  - create 3 seperate 512MB HDD to be used by Swift-Object Level Storage
+  - create a seperate 3GB HDD to be used by Cinder-Block Level Storage (change to controller to VirtIO)
+  - create 3 seperate 512MB HDD to be used by Swift-Object Level Storage (change controller to VirtIO)
   - Must have static IP configured.
   - This script use same NIC/IP for Management/External/VM Data networks.
   - Make sure that the IP you have given must have internet connectivity.
